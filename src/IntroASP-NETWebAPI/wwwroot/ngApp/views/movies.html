@@ -1,0 +1,31 @@
+﻿<h2>Home</h2>
+<p>
+    {{controller.message}}
+</p>
+
+<form ng-submit="controller.save()">
+    <div>
+        <label>ID:</label>
+        <input ng-model="controller.movie.id" />
+    </div>
+    <div>
+        <label>Name:</label>
+        <input ng-model="controller.movie.name" />
+    </div>
+    <div>
+        <label>Director:</label>
+        <input ng-model="controller.movie.director" />
+    </div>
+    <div>
+        <label>Run Time:</label>
+        <input ng-model="controller.movie.runTime" />
+    </div>
+    <input type="submit" value="Save" />
+</form>
+
+
+<ul>
+    <li ng-repeat="movie in controller.movies">
+        {{movie.id}} - {{movie.name}} - {{movie.director}} - {{movie.runTime}}
+    </li>
+</ul>
